@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenZone - Plant Care</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">GreenZone 🌱</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#request">Request</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1>Welcome to GreenZone</h1>
+            <p>Your partner in healthy, happy plants 🌱</p>
+            <a href="#services" class="btn hero-btn">Explore Services</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>🌿 Our Plant Care Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>💧 Water Scheduling</h3>
+                <p>Personalized watering reminders based on plant type and climate.</p>
+                <a href="learn/water-scheduling.html" class="btn service-btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>☀️ Sunlight Monitoring</h3>
+                <p>Track sunlight exposure and optimize plant placement.</p>
+                <a href="learn/sunlight-monitoring.html" class="btn service-btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>🌱 Fertilizer Guidance</h3>
+                <p>Know the right type and time to fertilize your plants.</p>
+                <a href="learn/fertilizer-guidance.html" class="btn service-btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>🩺 Plant Health Check</h3>
+                <p>Get advice by describing symptoms or uploading a photo.</p>
+                <a href="learn/plant-health.html" class="btn service-btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Form (Updated) -->
+    <section class="request-form" id="request">
+        <h2>📨 Request a Service</h2>
+        <form action="request_service.php" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required minlength="2" pattern="[A-Za-z\s]+"
+                    title="Name should only contain letters and spaces">
+                <span class="form-error">Please enter a valid name (letters and spaces only)</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                <span class="form-error">Please enter a valid email address</span>
+            </div>
+            <div class="form-group">
+                <label for="service">Select a Service:</label>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Choose a service</option>
+                    <option value="Water Scheduling">Water Scheduling</option>
+                    <option value="Sunlight Monitoring">Sunlight Monitoring</option>
+                    <option value="Fertilizer Guidance">Fertilizer Guidance</option>
+                    <option value="Plant Health Check">Plant Health Check</option>
+                </select>
+                <span class="form-error">Please select a service</span>
+            </div>
+            <button type="submit" class="btn form-btn">Submit Request</button>
+            <p class="form-note">Note: You will receive a confirmation email upon successful submission.</p>
+        </form>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Why GreenZone?</h2>
+                <p>We’re committed to making your indoor garden thrive. Whether you're a beginner or a pro, we make
+                    plant care simple and joyful.</p>
+            </div>
+            <div class="about-img">
+                <img src="plant7.jpeg" alt="Indoor plants">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"GreenZone completely changed the way I take care of my plants!"</p>
+                <h4>– Jaspal Singh</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Thanks to the personalized care tips, my balcony garden is thriving."</p>
+                <h4>– Karan Toor</h4>
+            </div>
+            <div class="testimonial">
+                <p>"The plant health check saved my dying fern!"</p>
+                <h4>– Priya Sharma</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h2>Plant Gallery</h2>
+        <div class="gallery-grid">
+            <img src="plant6.jpeg" alt="Plant 1" class="gallery-img">
+            <img src="plant2.jpeg" alt="Plant 2" class="gallery-img">
+            <img src="plant3.webp" alt="Plant 3" class="gallery-img">
+            <img src="plant4.jpeg" alt="Plant 4" class="gallery-img">
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+        <h2>Join Our Newsletter</h2>
+        <form action="newsletter.php" method="POST">
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <span class="form-error">Please enter a valid email</span>
+            </div>
+            <button type="submit" class="btn newsletter-btn">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 GreenZone. All rights reserved.</p>
+        <p>Contact: <a href="mailto:care@greenzone.com">care@greenzone.com</a></p>
+        <div class="social-links">
+            <a href="#" class="social-icon">📘</a>
+            <a href="#" class="social-icon">🐦</a>
+            <a href="#" class="social-icon">📷</a>
+        </div>
+    </footer>
+</body>
+
+</html>
