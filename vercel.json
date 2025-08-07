@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "newsletter.php", "use": "@vercel/php" },
+    { "src": "request_service.php", "use": "@vercel/php" },
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "learn/*.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/newsletter.php", "dest": "/newsletter.php" },
+    { "src": "/request_service.php", "dest": "/request_service.php" },
+    { "src": "/learn/(.*)", "dest": "/learn/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
